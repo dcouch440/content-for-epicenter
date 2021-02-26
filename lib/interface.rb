@@ -17,7 +17,9 @@ class Interface
       stats = "
         Matches: #{@@app.matching_chars.length}
         Matching Letters: #{@@app.matching_chars.split('').join(', ')}"
-      if @@app.has_integer?
+      if @@app.has_no_input?
+        puts "Looks like you missed an input"
+      elsif @@app.has_integer?
         puts "Hmm, try that again maybe. That input contains numbers.."
       elsif !@@app.has_vowel?
         puts "Hmm Im not sure those are valid inputs"
