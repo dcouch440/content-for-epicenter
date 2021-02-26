@@ -26,6 +26,7 @@ class Anagram
     get_words.all?(/[aeiouy]/i)
   end
   def has_integer?
-    get_words.map {|w| w =~ /\d/}
+    word_one, word_two = get_words
+    (word_one.scan(/\d/) + word_two.scan(/\d/)).length > 0 ? true : false
   end
 end
