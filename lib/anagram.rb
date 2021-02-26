@@ -3,6 +3,9 @@ class Anagram
     @word_one = word_one
     @word_two = word_two
   end
+  def is_anagram
+    'reach'
+  end
   def matching_chars
     word_one, word_two = get_words
     word_one.scan(/[#{word_two}]/i).join('')

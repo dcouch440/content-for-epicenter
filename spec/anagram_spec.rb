@@ -27,4 +27,12 @@ describe("Anagram") do
       expect(Anagram.new('cats', 'zAp').matching_chars).to(eq('a'))
     end
   end
+  describe("#is_anagram") do
+    it("returns true if the words have matching chars") do
+      expect(Anagram.new('cats', 'zap').is_anagram).to(eq(true))
+    end
+    it("return false if the words do not have a match") do 
+      expect(Anagram.new('cats', 'zap').is_anagram).to(eq(false))
+    end
+  end
 end
