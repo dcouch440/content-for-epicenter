@@ -7,6 +7,6 @@ class Anagram
     [@word_one, @word_two].map{|w| w.gsub(/\s/, '')}
   end
   def has_vowel?
-    [@word_one, @word_two].all?(/[aeiouy]/i)
+    get_words.all?(/[aeiouy]/i)
   end
 end
