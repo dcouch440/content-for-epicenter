@@ -1,14 +1,15 @@
 # Content for Epicenter
-#### *Co-Created By: David Couch*
+#### *Created By: David Couch*
 #### *Find out if a word is an anagram*
-* * * 
-<!-- 
-  ADD PLACEHOLDER FOR INSTALL
-  fix descriptions
- -->
+* * *
 
 ## Description
-This is an application for learning TDD with ruby while attending Epicodus coding school. This app Might be un finished and does not represent my class mates or my own coding knowledge.
+This is an app made to decipher wether your input value is an anagram or not.
+  ##### What is an anagram?
+  *  From [wikipedia]( https://en.wikipedia.org/wiki/Anagram ) : \
+    "An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.[1] For example, the word anagram itself can be rearranged into nag a ram, also the word binary into brainy and the word adobe into abode."
+  ##### How about an Antigram?
+  * In this app we are trying to find if there is _no_ matching letters as well. In this app we will refer to these at AntiGrams
 * * *
 
 ## Technologies used
@@ -22,16 +23,15 @@ This is an application for learning TDD with ruby while attending Epicodus codin
 * Ruby `2.6.5` is *required* to run this program.  
   * How to [install Ruby 2.6.5](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/installing-ruby).  
 
-* Go to ( https://github.com/dcouch440/content-for-epicenter.git ).
+* Go to ( https://github.com/dcouch440/content-for-epicenter ).
 
 * Navigate to the code button on the github website.
 
 * Click on the code button to open the menu.
 
+* Copy the HTTPS code by clicking the clipboard next to the link.
 
-- Copy the HTTPS code by clicking the clipboard next to the link.
-
-- Within your Bash terminal navigate to your desired location by using cd followed by your desired directory.
+* Within your Bash terminal navigate to your desired location by using cd followed by your desired directory.
 
 ```bash
  cd Desktop
@@ -91,10 +91,23 @@ gem install bundler
 bundle
 ```
 
-* Then from the terminal you can run logical code through the terminal by typing
+* Then from the terminal you can run logical code through the terminal by typing 
 ```bash
-ruby "file goes here (no quotes)"
+lib/main.rb
 ```
+
+* If you have any problems with that you can either try re setting the executable file by typing
+
+```bash
+chmod +x lib/main.rb
+```
+
+* Or
+```bash
+ruby lib/main.rb
+```
+
+* If there are any more concerns with scripting you can visit [this](https://www.learnhowtoprogram.com/ruby-and-rails/basic-ruby/basic-ruby-scripting#:~:text=We%20need%20to%20make%20the,the%20permissions%20for%20a%20file.) link for more details.
 
 ## Testing
 * This project was created using **test-driven development** (TDD).
@@ -110,13 +123,13 @@ rspec
 * If there is a problem in the code the testing suite will read as such :
 
 <div>
-  <img src="img/rspec-f2.PNG" alt="Failing RSpec test">
+  <img src="lib/img/rspec-f2.PNG" alt="Failing RSpec test">
 </div>
 
-* Follow the examples and read the English that describes what the function should do. If everything is in order you should receive back :
+* Follow the examples and read the English that describes what the function should do (These are located in the test suites between quotes). If everything is in order you should receive back :
 
 <div>
-  <img src="img/rspec-p.PNG" alt="Passing RSpec test">
+  <img src="lib/img/rspec-p.PNG" alt="Passing RSpec test">
 </div>
 
 ## Additional comments
@@ -125,7 +138,7 @@ rspec
 * * *
 
 ## Contact Information
-_David Couch: [Email](dcouch440@gmail.com)_\
+_David Couch: [Email](dcouch440@gmail.com)_
 * * *
 
 ## License
