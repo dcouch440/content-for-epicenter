@@ -34,7 +34,7 @@ class Anagram
     word_one, word_two = get_words
     (word_one.scan(/\d/) + word_two.scan(/\d/)).length > 0 ? true : false
   end
-  def has_input?
-
+  def has_no_input?
+    (@word_one == 'NO_INPUT' || @word_two == 'NO_INPUT') ? true : false
   end
 end
