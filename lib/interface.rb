@@ -1,43 +1,17 @@
 require_relative('anagram')
+require_relative('assets')
 
 class Interface
+  include Assets
+
   @@app = Anagram.new
+
   def self.run_program
-    intro
-    how_to
-    task
+    Assets.intro
+    Assets.how_to
+    tasks
   end
-  def self.intro
-    puts <<-INTRO
-              _𝓘͟𝓼͟ ͟𝓘͟𝓽͟ ͟𝓐͟                           
-              (, /  |                          
-                /---| __   _   _   __  _  ___  
-              ) /    |_/ (_(_(_(_/_/ (_(_(_// (_
-             (_/_____________ .-/_______𝓒𝓱𝓮𝓬𝓴𝓮𝓻      
-                             (_/
-    INTRO
-  end
-  def self.how_to
-    puts <<-HOW_TO
-        _____________________________________________________
-      | -- Welcome --                                       |
-      | *This App Checks to see if your                     |
-      |  word is an anagram or an antigram                  |
-      |                                                     |
-      |-- How To Use? --                                    |
-      | *Fallow The Prompt and enter the words              |
-      |  you wish to test                                   |
-      | *At the end of each combination you will be         |
-      |  asked to quite or go again!                        |
-      |                                                     |
-      |  To see these options again please enter GET_HELP   |
-      |                                                     |
-      |_________Thank you for using choosing Is It A?_______|
-
-
-    HOW_TO
-  end
-  def self.task
+  def self.tasks
     loop do
       ask
       stats = "
@@ -84,7 +58,7 @@ class Interface
     "
     input = gets.chomp
     if input == "GET_HELP"
-      how_to
+      Assets.how_to
       get_input(request)
     else
       input
