@@ -28,11 +28,19 @@ describe("Anagram") do
     end
   end
   describe("#is_antigram?") do
-    it("returns true if the words have matching chars") do
+    it("returns false if some chars match") do
       expect(Anagram.new('cats', 'zap').is_antigram?).to(eq(false))
     end
-    it("return false if the words do not have a match") do 
+    it("returns true if no chars match") do 
       expect(Anagram.new('cats', 'zip').is_antigram?).to(eq(true))
+    end
+  end
+  describe("#is_anagram?") do
+    it("returns true if the words match all chars") do
+      expect(Anagram.new('vile', 'evil').is_anagram?).to(eq(true))
+    end
+    it("return false if the words do not have a complete match") do 
+      expect(Anagram.new('cats', 'zip').is_anagram?).to(eq(false))
     end
   end
 end
