@@ -4,7 +4,7 @@ class Anagram
     @word_two = word_two
   end
   def is_anagram
-    'reach'
+    matching_chars.length > 0 ? true : false
   end
   def matching_chars
     word_one, word_two = get_words
