@@ -19,4 +19,14 @@ describe("Anagram") do
       expect(anagram.get_words).to(eq(['testspace','testspacetwo']))
     end
   end
+  describe("#matching_chars") do
+    it("returns the the chars that are a match") do
+      anagram = Anagram.new('cats', 'zap')
+      expect(anagram.matching_chars).to(eq('a'))
+    end
+    it("returns matching chars regardless of case") do
+      anagram = Anagram.new('cats', 'zAp')
+      expect(anagram.matching_chars).to(eq('a'))
+    end
+  end
 end

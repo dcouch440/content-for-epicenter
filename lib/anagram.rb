@@ -3,6 +3,9 @@ class Anagram
     @word_one = word_one
     @word_two = word_two
   end
+  def matching_chars
+
+  end
   def get_words
     [@word_one, @word_two].map{|w| w.gsub(/\s/, '')}
   end
