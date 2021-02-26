@@ -13,4 +13,10 @@ describe("Anagram") do
       expect(anagram.has_vowel?).to(eq(false))
     end
   end
+  describe("#get_words") do
+    it("returns both words with the spaces removes") do
+      anagram = Anagram.new('test space', 'test space two')
+      expect(anagram.get_words).to(eq(['testspace','testspacetwo']))
+    end
+  end
 end
