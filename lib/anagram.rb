@@ -4,6 +4,6 @@ class Anagram
     @word_two = word_two
   end
   def has_vowel?
-    [@word_one, @word_two].all?(/[aeiou]/)
+    [@word_one, @word_two].all?(/[aeiouy]/)
   end
 end
