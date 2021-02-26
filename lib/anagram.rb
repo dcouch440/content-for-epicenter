@@ -3,8 +3,8 @@ class Anagram
     @word_one = word_one
     @word_two = word_two
   end
-  def is_anagram
-    matching_chars.length > 0 ? true : false
+  def is_antigram?
+    matching_chars.length > 0 ? false : true
   end
   def matching_chars
     word_one, word_two = get_words
