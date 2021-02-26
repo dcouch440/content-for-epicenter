@@ -99,7 +99,7 @@ ruby "file goes here (no quotes)"
 ## Testing
 * This project was created using **test-driven development** (TDD).
 
-* To view the test suite, open PLACEHOLDER
+* To view the test suite, open anagram_spec.rb
 
 * To run the test suite yourself and verify program functionality
   

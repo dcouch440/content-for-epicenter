@@ -5,8 +5,13 @@ class Anagram
     @word_two = ''
   end
   def set_words(word_one, word_two)
-    @word_one = word_one
-    @word_two = word_two
+    if word_one == '' || word_two == ''
+      @word_one = 'NO_INPUT'
+      @word_two = 'NO_INPUT'
+    else
+      @word_one = word_one
+      @word_two = word_two
+    end
     self
   end
   def is_anagram?
@@ -28,5 +33,8 @@ class Anagram
   def has_integer?
     word_one, word_two = get_words
     (word_one.scan(/\d/) + word_two.scan(/\d/)).length > 0 ? true : false
+  end
+  def has_input?
+
   end
 end

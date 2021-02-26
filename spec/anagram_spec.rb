@@ -57,4 +57,15 @@ describe("Anagram") do
       expect(Anagram.new.set_words('cats', 'zip').has_integer?).to(eq(false))
     end   
   end
+  describe("#has_input?") do
+    it("should detect if there is no input") do
+      expect(Anagram.new.set_words('', '').has_input?).to(eq(false))
+    end
+    it("should detect if there is no input on either of the inputs") do
+      expect(Anagram.new.set_words('yellow', '').has_input?).to(eq(false))
+    end
+    it("should detect if there is inputs") do
+      expect(Anagram.new.set_words('yellow', 'zap').has_input?).to(eq(true))
+    end
+  end
 end
