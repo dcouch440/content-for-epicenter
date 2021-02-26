@@ -3,7 +3,7 @@ require('rspec')
 require('pry')
 
 describe("Anagram") do
-  describe("has_vowel") do
+  describe("#has_vowel") do
     it("returns true if the word contains a vowel") do
       anagram = Anagram.new('word')
       expect(anagram.has_vowel?).to(eq(true))

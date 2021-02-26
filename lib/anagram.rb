@@ -2,7 +2,7 @@ class Anagram
   def initialize(word)
     @word = word
   end
-  has_vowel?
-    
+  def has_vowel?
+    @word
   end
 end
