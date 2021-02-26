@@ -25,4 +25,7 @@ class Anagram
   def has_vowel?
     get_words.all?(/[aeiouy]/i)
   end
+  def has_integers?
+    
+  end
 end
