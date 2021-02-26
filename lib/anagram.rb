@@ -1,10 +1,16 @@
 class Anagram
-  def initialize(word_one, word_two)
+  attr_reader :word_one, :word_two
+  def initialize()
+    @word_one = ''
+    @word_two = ''
+  end
+  def set_words(word_one, word_two)
     @word_one = word_one
     @word_two = word_two
+    self
   end
   def is_anagram?
-
+    matching_chars.length == get_words[0].length
   end
   def is_antigram?
     matching_chars.length > 0 ? false : true
