@@ -49,12 +49,12 @@ describe("Anagram") do
       expect(Anagram.new.set_words('cats', 'zip').is_anagram?).to(eq(false))
     end
   end
-  describe("#has_integers?") do
+  describe("#has_integer?") do
     it("should know if numbers are within the string") do
-      expect(Anagram.new.set_words('cats', 'zip2').has_integers?).to(eq(true))
+      expect(Anagram.new.set_words('cats', 'zip2').has_integer?).to(eq(true))
     end
     it("should know if numbers are not within the string") do
-      expect(Anagram.new.set_words('cats', 'zip').has_integers?).to(eq(false))
+      expect(Anagram.new.set_words('cats', 'zip').has_integer?).to(eq(false))
     end   
   end
 end

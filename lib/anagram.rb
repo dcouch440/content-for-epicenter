@@ -25,7 +25,7 @@ class Anagram
   def has_vowel?
     get_words.all?(/[aeiouy]/i)
   end
-  def has_integers?
-    
+  def has_integer?
+    get_words.map {|w| w =~ /\d/}
   end
 end
