@@ -21,7 +21,7 @@ class Interface
         puts "Looks like you missed an input"
       elsif @@app.has_integer?
         puts "Hmm, try that again maybe. That input contains numbers.."
-      elsif !@@app.has_vowel?
+      elsif @@app.has_no_vowel?
         puts "Hmm Im not sure those are valid inputs"
       elsif @@app.is_antigram?
         puts "Ouch looks like nothing in those words matched"

@@ -9,12 +9,12 @@ describe("Anagram") do
       expect([anagram.word_one, anagram.word_two]).to(eq(['word', 'word two']))
     end
   end
-  describe("#has_vowel") do
+  describe("#has_no_vowel") do
     it("returns true if the word contains a vowel") do
-      expect(Anagram.new.set_words('word', 'word').has_vowel?).to(eq(true))
+      expect(Anagram.new.set_words('word', 'word two').has_no_vowel?).to(eq(false))
     end
     it("returns false if the word does not contain a vowel") do
-      expect(Anagram.new.set_words('hbvc', 'hbvc').has_vowel?).to(eq(false))
+      expect(Anagram.new.set_words('hbvc', 'hbvc').has_no_vowel?).to(eq(true))
     end
   end
   describe("#get_words") do

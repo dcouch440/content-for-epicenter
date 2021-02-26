@@ -1,4 +1,4 @@
-# Content for Epicenter
+# Is It A?
 #### *Created By: David Couch*
 #### *Find out if a word is an anagram*
 * * *

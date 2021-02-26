@@ -5,13 +5,8 @@ class Anagram
     @word_two = ''
   end
   def set_words(word_one, word_two)
-    if word_one == '' || word_two == ''
-      @word_one = 'NO_INPUT'
-      @word_two = 'NO_INPUT'
-    else
-      @word_one = word_one
-      @word_two = word_two
-    end
+    @word_one = word_one == '' ? 'NO_INPUT' : word_one
+    @word_two = word_two == '' ? 'NO_INPUT' : word_two
     self
   end
   def is_anagram?
@@ -27,8 +22,8 @@ class Anagram
   def get_words
     [@word_one, @word_two].map{|w| w.gsub(/\s/, '')}
   end
-  def has_vowel?
-    get_words.all?(/[aeiouy]/i)
+  def has_no_vowel?
+    !get_words.all?(/[aeiouy]/i)
   end
   def has_integer?
     word_one, word_two = get_words
