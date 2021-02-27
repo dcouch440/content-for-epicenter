@@ -19,14 +19,14 @@ class Anagram
     matching_chars.length > 0 ? false : true
   end
   def matching_chars
-    word_one, word_two = get_words
+    word_one, word_two = get_words()
     word_one.scan(/[#{word_two}]/i).join('')
   end
   def has_no_vowel?
     !get_words.all?(/[aeiouy]/i)
   end
   def has_integer?
-    word_one, word_two = get_words
+    word_one, word_two = get_words()
     (word_one.scan(/\d/) + word_two.scan(/\d/)).length > 0 ? true : false
   end
   def has_no_input?

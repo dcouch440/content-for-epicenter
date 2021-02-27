@@ -9,9 +9,9 @@ class Interface
   def self.run_program()
     Assets.intro
     Assets.how_to
-    tasks
+    tasks()
   end
-  def self.tasks
+  def self.tasks()
     loop do
       ask()
       stats = "
@@ -44,7 +44,7 @@ class Interface
       break if gets.chomp.downcase == 'no'
     end
   end
-  def self.ask
+  def self.ask()
     word_one = get_input("\nEnter Your First Word")
     word_two = get_input("Enter Your Second Word")
     @@app.set_words(word_one, word_two)
