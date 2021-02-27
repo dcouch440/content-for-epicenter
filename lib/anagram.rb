@@ -23,7 +23,7 @@ class Anagram
     word_one.scan(/[#{word_two}]/i).join('')
   end
   def has_no_vowel?
-    !get_words.all?(/[aeiouy]/i)
+    ![@word_one, @word_two].map { |word| word.split(' ').all?(/[aeiouy]/i) }.all?
   end
   def has_integer?
     word_one, word_two = get_words()
@@ -33,3 +33,4 @@ class Anagram
     (@word_one == 'NO_INPUT' || @word_two == 'NO_INPUT') ? true : false
   end
 end
+Anagram.new.set_words('hbvc', 'hbvc').has_no_vowel?

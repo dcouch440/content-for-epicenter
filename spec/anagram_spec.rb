@@ -16,6 +16,12 @@ describe("Anagram") do
     it("returns false if the word does not contain a vowel") do
       expect(Anagram.new.set_words('hbvc', 'hbvc').has_no_vowel?).to(eq(true))
     end
+    it("returns true if one of the words in a sentence does not contains a value") do
+      expect(Anagram.new.set_words('dog cat yellow', 'apple seven hbvc').has_no_vowel?).to(eq(true))
+    end
+    it("returns false if  all of the words contain a vowel") do
+      expect(Anagram.new.set_words('dog cat yellow', 'apple seven camera').has_no_vowel?).to(eq(false))
+    end
   end
   describe("#get_words") do
     it("returns both words with the spaces removes") do
