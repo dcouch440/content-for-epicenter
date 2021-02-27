@@ -45,6 +45,12 @@ describe("Anagram") do
     it("return false if the words do not have a complete match") do 
       expect(Anagram.new.set_words('cats', 'zip').is_anagram?).to(eq(false))
     end
+    it("returns true if two words combined are an anagram") do
+      expect(Anagram.new.set_words('vile nap', 'evil pan').is_anagram?).to(eq(true))
+    end
+    it("returns false if two words combined are not an anagram") do
+      expect(Anagram.new.set_words('vile nap zip', 'evil pan spoon').is_anagram?).to(eq(false))
+    end
   end
   describe("#has_integer?") do
     it("should know if numbers are within the string") do
