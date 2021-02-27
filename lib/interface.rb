@@ -17,25 +17,25 @@ class Interface
       stats = "
         Matches: #{@@app.matching_chars.length}
         Matching Letters: #{@@app.matching_chars.split('').join(', ')}"
-      if @@app.has_no_input?
-        puts "Looks like you missed an input"
-      elsif @@app.has_integer?
-        puts "Hmm, try that again maybe. That input contains numbers.."
-      elsif @@app.has_no_vowel?
-        puts "Hmm Im not sure those are valid inputs"
-      elsif @@app.is_antigram?
-        puts "Ouch looks like nothing in those words matched"
-      elsif @@app.is_anagram?
-        puts <<-IS_ANAGRAM 
-          Congrats, Thats an anagram! #{@@app.word_one} and #{@@app.word_two} are an anagram.
-          #{stats}
-        IS_ANAGRAM
-      else 
-        puts <<-DEFAULT
-          The inputs given are not an anagram OR antigram.. Heres what im getting
-          #{stats}
-        DEFAULT
-      end
+        if @@app.has_no_input?
+          puts "Looks like you missed an input."
+        elsif @@app.has_integer?
+          puts "Hmm, try that again maybe. That input contains numbers.."
+        elsif @@app.has_no_vowel?
+          puts "Hmm Im not sure those are valid inputs."
+        elsif @@app.is_antigram?
+          puts "Ouch looks like nothing in those words matched."
+        elsif @@app.is_anagram?
+          puts <<-IS_ANAGRAM 
+            Congrats, Thats an anagram! #{@@app.word_one} and #{@@app.word_two} are an anagram.
+            #{stats}
+          IS_ANAGRAM
+        else 
+          puts <<-DEFAULT
+            The inputs given are not an anagram OR antigram.. Heres what im getting.
+            #{stats}
+          DEFAULT
+        end
       print "
         Have Any Other Words?
         Please say No if you are done!
