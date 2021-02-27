@@ -6,8 +6,8 @@
 ## Description
 This is an app made to decipher wether your input value is an anagram or not.
   ##### What is an anagram?
-  *  From [wikipedia]( https://en.wikipedia.org/wiki/Anagram ) : \
-    "An anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once.[1] For example, the word anagram itself can be rearranged into nag a ram, also the word binary into brainy and the word adobe into abode."
+  *  From [wikipedia]( https://en.wikipedia.org/wiki/Anagram )
+  * This application is coded to give users a general idea and might not fallow strict anagram rules.
   ##### How about an Antigram?
   * In this app we are trying to find if there is _no_ matching letters as well. In this app we will refer to these at AntiGrams
 * * *
