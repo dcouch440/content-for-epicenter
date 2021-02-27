@@ -19,6 +19,9 @@ class Anagram
     word_one, word_two = get_words()
     (word_one.scan(/\d/) + word_two.scan(/\d/)).length > 0 ? true : false
   end
+  def has_non_letter?
+    'reach'
+  end
   def has_no_vowel?
     ![@word_one, @word_two].map { |word| word.split(' ').all?(/[aeiouy]/i) }.all?
   end

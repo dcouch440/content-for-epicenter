@@ -80,12 +80,12 @@ describe("Anagram") do
       expect(@app.set_words('yellow', 'zap').has_no_input?).to(eq(false))
     end
   end
-  describe("#has_non_letter?")
-    it("should detect if there are non letters in the words and return true if it does")
-    expect(@app.set_words('yellow', '123asd').has_no_input?).to(eq(true))
+  describe("#has_non_letter?") do
+    it("should detect if there are non letters in the words and return true if it does") do
+    expect(@app.set_words('yellow', '123asd').has_non_letter?).to(eq(true))
     end
     it("should detect if there are non letters in the words and return false if it does not") do
-      expect(@app.set_words('yellow', 'cats').has_no_input?).to(eq(false))
+      expect(@app.set_words('yellow', 'cats').has_non_letter?).to(eq(false))
     end
   end
 end
