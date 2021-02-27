@@ -11,16 +11,19 @@ module Assets
   end
   def self.how_to
     puts <<-HOW_TO
-        _____________________________________________________
-      | -- Welcome --                                       |
+       _____________________________________________________
+      |  -- Welcome -------------------------------------   |
       | *This App Checks to see if your                     |
-      |  word is an anagram or an antigram                  |
+      |  word is an anagram or an antigram.                 |
       |                                                     |
-      |-- How To Use? --                                    |
+      |  -- How To Use? ---------------------------------   |
       | *Fallow The Prompt and enter the words              |
-      |  you wish to test                                   |
+      |  you wish to test.                                  |
       | *At the end of each combination you will be         |
-      |  asked to quite or go again!                        |
+      |  asked to quit or go again!                         |
+      | *You have the option to enter a sentence too.       |
+      | *You can also check to see if things are an.        |
+      |  antigram.                                          |
       |                                                     |
       |  To see these options again please enter GET_HELP   |
       |                                                     |

@@ -14,33 +14,21 @@ class Interface
   def self.tasks()
     loop do
       ask()
-      stats = "
-        Matches: #{@@app.matching_chars.length}
-        Matching Letters: #{@@app.matching_chars.split('').join(', ')}"
+      stats = "\nMatches: #{@@app.matching_chars.length}\nMatching Letters: #{@@app.matching_chars.split('').join(', ')}\n"
         if @@app.has_no_input?
-          puts "Looks like you missed an input."
+          puts "\n\nLooks like you missed an input.\n"
         elsif @@app.has_integer?
-          puts "Hmm, try that again maybe. That input contains numbers.."
+          puts "\n\nHmm, try that again maybe. That input contains numbers..\n"
         elsif @@app.has_no_vowel?
-          puts "Hmm Im not sure those are valid inputs."
+          puts "\n\nHmm Im not sure those are valid inputs.\n"
         elsif @@app.is_antigram?
-          puts "Ouch looks like nothing in those words matched."
+          puts "\n\nOuch looks like nothing in those words matched.\n"
         elsif @@app.is_anagram?
-          puts <<-IS_ANAGRAM 
-            Congrats, Thats an anagram! #{@@app.word_one} and #{@@app.word_two} are an anagram.
-            #{stats}
-          IS_ANAGRAM
+          puts "\n\nCongrats, Thats an anagram! #{@@app.word_one} and #{@@app.word_two} are an anagram.\n#{stats}\n"
         else 
-          puts <<-DEFAULT
-            The inputs given are not an anagram OR antigram.. Heres what im getting.
-            #{stats}
-          DEFAULT
+          puts "\n\nThe inputs given are not an anagram OR antigram.. Heres what im getting.\n#{stats}\n"
         end
-      print "
-        Have Any Other Words?
-        Please say No if you are done!
-        Otherwise.. Hit Enter.
-        Continue?:"
+      print "\nHave Any Other Words?\nPlease say No if you are done!\nOtherwise.. Hit Enter.\nContinue?:"
       break if gets.chomp.downcase == 'no'
     end
   end
@@ -49,8 +37,7 @@ class Interface
     word_two = get_input("Enter Your Second Word")
     @@app.set_words(word_one, word_two)
   end
-  def self.get_input(ask)
-    request = ask
+  def self.get_input(request)
     print "#{request}: "
     input = gets.chomp
     if input == "GET_HELP"
