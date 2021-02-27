@@ -6,14 +6,14 @@ class Interface
 
   @@app = Anagram.new
 
-  def self.run_program
+  def self.run_program()
     Assets.intro
     Assets.how_to
     tasks
   end
   def self.tasks
     loop do
-      ask
+      ask()
       stats = "
         Matches: #{@@app.matching_chars.length}
         Matching Letters: #{@@app.matching_chars.split('').join(', ')}"
