@@ -19,6 +19,8 @@ class Interface
         puts "\n\nLooks like you missed an input.\n"
       elsif @@app.has_integer?
         puts "\n\nHmm, try that again maybe. That input contains numbers..\n"
+      elsif @@app.has_non_letter?
+        puts "\n\nHmm, try that again maybe. That input contains something we are not looking for..\n"
       elsif @@app.has_no_vowel?
         puts "\n\nHmm Im not sure those are valid inputs.\n"
       elsif @@app.is_antigram?
