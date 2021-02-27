@@ -13,7 +13,7 @@ class Interface
   end
   def self.tasks()
     loop do
-      ask()
+      Utils.ask(@@app)
       stats = Utils.display_stats(@@app)
       if @@app.has_no_input?
         puts "\n\nLooks like you missed an input.\n"
@@ -32,21 +32,6 @@ class Interface
       end
       print "\nHave Any Other Words?\nPlease say No if you are done!\nOtherwise.. Hit Enter.\nContinue?:"
       break if Utils.done?()
-    end
-  end
-  def self.ask()
-    word_one = get_input("\nEnter Your First Word")
-    word_two = get_input("Enter Your Second Word")
-    @@app.set_words(word_one, word_two)
-  end
-  def self.get_input(request)
-    print "#{request}: "
-    input = gets.chomp
-    if input == "GET_HELP"
-      Assets.how_to
-      get_input(request)
-    else
-      input
     end
   end
 end
