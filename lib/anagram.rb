@@ -33,4 +33,3 @@ class Anagram
     (@word_one == 'NO_INPUT' || @word_two == 'NO_INPUT') ? true : false
   end
 end
-Anagram.new.set_words('hbvc', 'hbvc').has_no_vowel?
