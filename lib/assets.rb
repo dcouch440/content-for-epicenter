@@ -28,8 +28,6 @@ module Assets
       |  To see these options again please enter GET_HELP   |
       |                                                     |
       |_________Thank you for using choosing Is It A?_______|
-
-
     HOW_TO
   end
 end
