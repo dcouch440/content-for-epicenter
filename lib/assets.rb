@@ -1,5 +1,6 @@
 module Assets
-  def self.intro
+
+  def self.intro()
     puts <<-INTRO
               _𝓘͟𝓼͟ ͟𝓘͟𝓽͟ ͟𝓐͟                           
               (, /  |                          
@@ -9,7 +10,8 @@ module Assets
                             (_/
     INTRO
   end
-  def self.how_to
+
+  def self.how_to()
     puts <<-HOW_TO
        _____________________________________________________
       |  -- Welcome -------------------------------------   |
@@ -30,4 +32,5 @@ module Assets
       |_________Thank you for using choosing Is It A?_______|
     HOW_TO
   end
+  
 end
