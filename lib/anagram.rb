@@ -27,7 +27,7 @@ class Anagram
 
   def has_non_letter?()
     get_words().map {
-      |word| word.split('').map {|char| char =~ /[a-z]/i}.map {|char_bool| char_bool.nil?}.include?(true)
+      |word| word.split('').map { |char| char =~ /[a-z]/i }.map { |char_bool| char_bool.nil? }.include?(true)
     }.include?(true)
   end
 
@@ -36,11 +36,11 @@ class Anagram
   end
   
   def is_antigram?()
-    matching_chars.length > 0 ? false : true
+    matching_chars().length > 0 ? false : true
   end
 
   def is_anagram?()
-    matching_chars.length == get_words[0].length
+    matching_chars().length == get_words[0].length
   end
 
   def matching_chars()

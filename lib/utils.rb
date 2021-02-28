@@ -17,7 +17,7 @@ module Utils
     print "#{request}: "
     input = gets.chomp
     if input == "GET_HELP"
-      Assets.how_to
+      Assets.how_to()
       get_input(request)
     else
       input
